@@ -36,7 +36,7 @@ function App() {
       </form>
       <div className="recipes">
       {recipes.map(recipe => (
-        <Recipe title={recipe.recipe.label} image={recipe.recipe.image} calorie={recipe.recipe.calories} key={recipe.recipe.calories}
+        <Recipe title={recipe.recipe.label} image={recipe.recipe.image} calorie={Math.trunc(recipe.recipe.calories)} key={recipe.recipe.label}
         ingredients={recipe.recipe.ingredients}/>
       ))}
       </div>
